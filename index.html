@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.3.200/build/pdf.min.js"></script>
+    <meta charset="UTF-8">
+    <title>PDF preview</title>
+</head>
+<body>
+<h1>PDF preview</h1>
+<div id="div1"></div>
+<canvas id="mycanvas"></canvas>
+
+<script>
+    pdfjsLib.getDocument("./example.pdf").then(function(doc) {
+        console.log("loaded");
+        document.getElementById("div1").innerHTML = "loaded";
+    })
+</script>
+
+</body>
+</html>
